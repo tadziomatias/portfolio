@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import logoM from './assets/logo-m.png'
+import screenshotRf from './assets/screenshot-rf.png'
+import project2 from './assets/project2.svg'
+import project3 from './assets/project3.svg'
 
 export default function App() {
   const [isDark, setIsDark] = useState(true)
@@ -28,9 +32,9 @@ export default function App() {
   }
 
   const projects = [
-    { id: 1, title: 'Projeto RiscoFauna', img: '/screenshot-rf.png' },
-    { id: 2, title: 'Dashboard Conservação', img: '/project3.svg' },
-    { id: 3, title: 'Soluções Mobile', img: '/project2.svg' }
+    { id: 1, title: 'Projeto RiscoFauna', img: screenshotRf },
+    { id: 2, title: 'Dashboard Conservação', img: project3 },
+    { id: 3, title: 'Soluções Mobile', img: project2 }
   ]
 
   return (
@@ -39,7 +43,7 @@ export default function App() {
       <header className="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/logo-m.png" alt="logo" className="w-10 h-10 rounded-lg object-cover" />
+            <img src={logoM} alt="logo" className="w-10 h-10 rounded-lg object-cover" />
             <span className="font-semibold">Matias Dev</span>
           </div>
           <nav className="flex items-center gap-6 text-sm">
@@ -98,7 +102,7 @@ export default function App() {
         <section>
           <h2 className="text-2xl font-semibold mb-6">Projeto em Destaque</h2>
           <div className="flex flex-col md:flex-row gap-6 items-center">
-            <img src="/screenshot-rf.png" alt="Projeto destaque" className="w-full md:w-1/2 rounded-lg shadow" />
+            <img src={screenshotRf} alt="Projeto destaque" className="w-full md:w-1/2 rounded-lg shadow" />
             <div className="md:w-1/2">
               <h3 className="text-xl font-bold">RiscoFauna — Segurança Operacional em Aeródromos</h3>
               <p className="mt-3 text-slate-700 dark:text-slate-300">Aplicativo para coleta e análises de dados para Gerenciamento de Risco de Fauna, integrando Mapeamento, Dashboards e Inteligência.</p>
@@ -135,7 +139,7 @@ export default function App() {
       <footer className="border-t border-slate-200 dark:border-slate-800 mt-12">
         <div className="max-w-4xl mx-auto px-6 py-6 text-sm text-slate-600 dark:text-slate-400 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <img src="/logo-m.png" alt="logo" className="w-6 h-6 rounded-lg object-cover" />
+            <img src={logoM} alt="logo" className="w-6 h-6 rounded-lg object-cover" />
             <span>© {new Date().getFullYear()} Matias</span>
           </div>
         </div>
